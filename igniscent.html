@@ -272,31 +272,29 @@
   <article>
   <h2>Why Women Struggle More</h2>
   <div class="article-2image">
-    <img src="What_Does_Your_First_Period_Look_Like_20964383-b86b-4747-8cb6-bceb8c037717.webp" alt="period" class="responsive-img">
+    <img src="What_Does_Your_First_Period_Look_Like_20964383-b86b-4747-8cb6-bceb8c037717.webp" alt="period">
   </div>
 </article>
-
-<!-- CSS for responsive images -->
+    
 <style>
   .article-2image {
-    overflow: hidden; /* Prevents image overflow */
-    width: 100%; /* Ensures the container takes up full width */
+    width: 100%;
     display: flex;
     justify-content: center; /* Centers the image horizontally */
+    overflow: hidden;
   }
-  
-  .responsive-img {
-    width: 100%;
-    height: auto; /* Maintains aspect ratio */
-    object-fit: cover; /* Ensures the image fills the space without stretching */
+
+  .article-2image img {
+    width: 100%; /* Makes sure the image takes full width of its container */
+    height: auto; /* Keeps the image's aspect ratio intact */
+    object-fit: contain; /* Ensures the whole image is shown without cropping */
   }
-  
+
   /* Mobile specific styles */
   @media (max-width: 768px) {
     .article-2image img {
       width: 100%;
       height: auto;
-      object-fit: contain; /* Ensures the image is fully visible without cutting off */
     }
   }
 </style>
