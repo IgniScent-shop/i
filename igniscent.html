@@ -269,7 +269,7 @@
       <p>One of the most significant hurdles in achieving weight loss is managing cravings, which often lead to the excessive consumption of calories. Have you ever noticed that boredom or stress intensifies your cravings? This is because cravings are not just about willpower; they're deeply rooted in our brain's reward system, influenced by hormones and external cues that can make controlling calorie intake challenging.</p>
     </article>
 
-   <article>
+  <article>
   <h2>Why Women Struggle More</h2>
   <div class="article-2image">
     <img src="What_Does_Your_First_Period_Look_Like_20964383-b86b-4747-8cb6-bceb8c037717.webp" alt="period" class="responsive-img">
@@ -279,19 +279,24 @@
 <!-- CSS for responsive images -->
 <style>
   .article-2image {
-    text-align: center;
+    overflow: hidden; /* Prevents image overflow */
+    width: 100%; /* Ensures the container takes up full width */
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
   }
   
   .responsive-img {
     width: 100%;
-    max-width: 600px; /* Limits the size on larger screens */
-    height: auto;
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures the image fills the space without stretching */
   }
   
   /* Mobile specific styles */
   @media (max-width: 768px) {
     .article-2image img {
-      width: 90%; /* Adjust image size for mobile */
+      width: 100%;
+      height: auto;
+      object-fit: contain; /* Ensures the image is fully visible without cutting off */
     }
   }
 </style>
