@@ -240,9 +240,9 @@
         <img src="how-to-lose-weight-adele.jpg" alt="Image about weight loss" />
       </div>
       <p>Do you find yourself stuck in a cycle of extensive cardio and restrictive diets without seeing the desired weight loss results? The science behind shedding pounds is deceptively straightforward: it's all about achieving a caloric deficit. No cutting-edge diet trend or intense exercise regimen can bypass the fundamental laws of thermodynamics.</p>
-      <p>"Every calorie is a unit of energy," states Dr. Han Seojin, a renowned endocrinologist who has helped reshape the lives of celebrities and high-profile individuals. "Our bodies store any excess calories as fat. Therefore, the key to effective weight loss is quite simple: consume fewer calories than you expend."</p>
+      <p>"Every calorie is a unit of energy," states Dr. Han Seojin, a renowned endocrinologist. "Our bodies store any excess calories as fat. Therefore, the key to effective weight loss is quite simple: consume fewer calories than you expend."</p>
       <p>So, if the principle of weight loss is as simple as creating a caloric deficit, why do so many of us find it difficult? The answer often lies beyond the physical aspects, deep within our psychological and environmental influences.</p>
-      <p>One of the most significant hurdles in achieving weight loss is managing cravings, which often lead to the excessive consumption of calories. Have you ever noticed that boredom or stress intensifies your cravings? This is because cravings are not just about willpower; they're deeply rooted in our brain's reward system, influenced by hormones and external cues that can make controlling calorie intake challenging.</p>
+      <p>One of the most significant hurdles in achieving weight loss is managing cravings. Cravings are deeply rooted in our brain's reward system, influenced by hormones and external cues that can make controlling calorie intake challenging.</p>
     </article>
 
     <article>
@@ -259,37 +259,39 @@
   <section class="newsletter">
     <h2>Want more updates like this?</h2>
     <p>Join our newsletter for expert tips and breakthrough discoveries.</p>
-    <input type="email" placeholder="Enter your email" />
-    <button>Subscribe</button>
+    <form>
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
   </section>
 
   <div class="button-container">
-    <a href="https://igniscent.shop">Get Yours Now</a>
+    <a href="#top">Learn About the Fix</a>
   </div>
 
   <footer>
     &copy; 2025 IgniScent Labs. All rights reserved.
   </footer>
 
-  <button onclick="scrollToTop()" id="scrollToTopBtn">&#8679;</button>
+  <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
 
   <script>
-    window.addEventListener('load', function () {
-      document.getElementById('loader').style.display = 'none';
+    window.addEventListener("load", function() {
+      document.getElementById("loader").style.display = "none";
     });
 
-    const scrollBtn = document.getElementById("scrollToTopBtn");
-    window.onscroll = function () {
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    window.onscroll = function() {
       if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollBtn.style.display = "block";
+        scrollToTopBtn.style.display = "block";
       } else {
-        scrollBtn.style.display = "none";
+        scrollToTopBtn.style.display = "none";
       }
     };
+
     function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   </script>
-
 </body>
 </html>
