@@ -131,6 +131,14 @@
       transform: scale(1.03);
     }
 
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter Subscription</title>
+  <style>
+    
     /* Newsletter */
     .newsletter {
       text-align: center;
@@ -140,15 +148,18 @@
       border-radius: 12px;
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
     }
+
     .newsletter h2 {
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
       margin-bottom: 0.5rem;
     }
+
     .newsletter p {
       font-size: 1rem;
       margin-bottom: 1rem;
     }
+
     .newsletter input {
       padding: 0.75rem;
       font-size: 1rem;
@@ -160,10 +171,12 @@
       background-color: #fff5f7;
       transition: box-shadow 0.3s;
     }
+
     .newsletter input:focus {
       outline: none;
       box-shadow: 0 0 8px rgba(94, 75, 86, 0.3);
     }
+
     .newsletter button {
       padding: 0.75rem 1.5rem;
       font-size: 1rem;
@@ -175,11 +188,26 @@
       cursor: pointer;
       font-family: Georgia, serif;
       transition: all 0.3s ease;
+      display: inline-block; /* Ensure the button is inline */
     }
+
     .newsletter button:hover {
       transform: translateY(-2px);
       background: linear-gradient(135deg, #CDB4DB, #E6A8B0);
     }
+  </style>
+</head>
+<body>
+
+  <div class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Get the latest updates straight to your inbox!</p>
+    <input type="email" placeholder="Enter your email" />
+    <button type="submit">Subscribe</button>
+  </div>
+
+</body>
+</html>
 
     /* CTA Button */
     .button-container {
