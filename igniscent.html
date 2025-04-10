@@ -6,175 +6,128 @@
   <meta name="description" content="Discover the science of weight loss with expert insights from endocrinologists. Learn about cravings, hormonal influences, and how to achieve a caloric deficit." />
   <meta name="keywords" content="weight loss, cravings, science of weight loss, hormonal cycles, caloric deficit, women's health" />
   <title>Weight Loss Simplified: The Science</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    /* Loader Styles */
-    #loader {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(255, 245, 247, 0.95);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-      animation: fadeOut 0.5s ease-in-out forwards;
-    }
-    .loader-spinner {
-      border: 5px solid #E6A8B0;
-      border-top: 5px solid #FFF5F7;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      0% {transform: rotate(0deg);}
-      100% {transform: rotate(360deg);}
-    }
-    @keyframes fadeOut {
-      from { opacity: 1; }
-      to { opacity: 0; display: none; }
-    }
-
-    /* General Styles */
+    /* Reset and Global Styles */
     * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: Georgia, serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(180deg, #fff5f7 0%, #fdecef 100%);
-      color: #5E4B56;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fafafa;
+      color: #333;
       line-height: 1.6;
-      transition: all 0.3s ease-in-out;
+    }
+    h1, h2 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
     }
 
-    /* Header */
+    /* Header Styles */
     header {
-      background: linear-gradient(135deg, #E5D4EF, #FFF5F7);
-      padding: 2rem 1rem;
+      background-color: #E6A8B0;
+      color: white;
+      padding: 3rem 1rem;
       text-align: center;
-      border-bottom: 2px solid #E6A8B0;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      animation: fadeInDown 1s ease-in-out;
-    }
-    @keyframes fadeInDown {
-      from {opacity: 0; transform: translateY(-20px);}
-      to {opacity: 1; transform: translateY(0);}
+      border-bottom: 4px solid #FFF5F7;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: 0.5rem;
     }
     header p {
-      font-size: 1rem;
       font-style: italic;
-      margin: 0;
+      font-size: 1.1rem;
     }
 
+    /* Main Content Styles */
     main {
-      max-width: 850px;
+      max-width: 900px;
       margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 0 1.5rem;
     }
 
     article {
-      background: #fff;
+      background-color: white;
       margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-      border: 1px solid rgba(230, 168, 176, 0.3);
-      animation: fadeInUp 0.6s ease forwards;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    article:nth-child(even) {
-      background: #fdecef;
-    }
-    @keyframes fadeInUp {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
+    article:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
     article h2 {
-      font-family: 'Playfair Display', serif;
+      color: #E6A8B0;
       font-size: 2rem;
-      border-bottom: 2px solid #E6A8B0;
-      padding-bottom: 2.0rem;
-      color: #5E4B56;
-      margin-bottom: 1rem;
-    }
-    article p {
-      font-size: 1.1rem;
-      text-align: justify;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
-    .article-image, .article-2image {
-      text-align: center;
-      margin: 1.5rem 0;
-    }
-    .article-image img,
-    .article-2image img {
+    .article-image img, .article-2image img {
       width: 100%;
-      max-width: 700px;
       height: auto;
-      border-radius: 12px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
-      transition: transform 0.3s;
-    }
-    .article-image img:hover,
-    .article-2image img:hover {
-      transform: scale(1.03);
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
     }
 
-    /* CTA Button */
-    .button-container {
-      text-align: center;
-      margin: 2.5rem 0;
-    }
-    .button-container a {
+    /* Call to Action Button */
+    .cta-button {
+      display: inline-block;
       background-color: #E6A8B0;
       color: white;
-      padding: 1.25rem 2.5rem;
-      font-size: 1.5rem;
-      border-radius: 8px;
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
       text-decoration: none;
-      transition: transform 0.3s, background-color 0.3s;
+      border-radius: 50px;
+      margin: 3rem auto;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
-    .button-container a:hover {
+    .cta-button:hover {
       background-color: #CDB4DB;
       transform: scale(1.05);
     }
 
-    /* Footer */
+    /* Footer Styles */
     footer {
       text-align: center;
-      padding: 1rem;
-      font-size: 0.95rem;
-      background: linear-gradient(180deg, #FFF5F7, #E5D4EF);
-      border-top: 2px solid #E6A8B0;
-      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+      padding: 2rem;
+      background-color: #f5f5f5;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 4px solid #E6A8B0;
     }
 
-    /* Scroll-to-top */
+    /* Scroll to Top Button */
     #scrollToTopBtn {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      display: none;
       background-color: #E6A8B0;
       color: white;
-      padding: 10px 15px;
-      border: none;
+      padding: 15px;
       border-radius: 50%;
+      border: none;
       cursor: pointer;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
+      display: none;
       z-index: 999;
-      transition: background-color 0.3s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
     }
     #scrollToTopBtn:hover {
       background-color: #CDB4DB;
@@ -182,19 +135,20 @@
 
     /* Responsive Design */
     @media (max-width: 768px) {
-      .newsletter input {
-        width: 80%;
+      header h1 {
+        font-size: 2rem;
       }
-      .button-container a {
-        padding: 1rem 2rem;
-        font-size: 1.2rem;
+      main {
+        padding: 0 1rem;
+      }
+      .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
-
-  <div id="loader"><div class="loader-spinner"></div></div>
 
   <header>
     <h1>Endocrinologist's Breakthrough: An INSTANT fix to cravings backed by science</h1>
@@ -209,8 +163,6 @@
       </div>
       <p>Do you find yourself stuck in a cycle of extensive cardio and restrictive diets without seeing the desired weight loss results? The science behind shedding pounds is deceptively straightforward: it's all about achieving a caloric deficit. No cutting-edge diet trend or intense exercise regimen can bypass the fundamental laws of thermodynamics.</p>
       <p>"Every calorie is a unit of energy," states Dr. Han Seojin, a renowned endocrinologist who has helped reshape the lives of celebrities and high-profile individuals. "Our bodies store any excess calories as fat. Therefore, the key to effective weight loss is quite simple: consume fewer calories than you expend."</p>
-      <p>So, if the principle of weight loss is as simple as creating a caloric deficit, why do so many of us find it difficult? The answer often lies beyond the physical aspects, deep within our psychological and environmental influences.</p>
-      <p>One of the most significant hurdles in achieving weight loss is managing cravings, which often lead to the excessive consumption of calories. Have you ever noticed that boredom or stress intensifies your cravings? This is because cravings are not just about willpower; they're deeply rooted in our brain's reward system, influenced by hormones and external cues that can make controlling calorie intake challenging.</p>
     </article>
 
     <article>
@@ -220,36 +172,20 @@
       </div>
       <p>Women’s bodies are biologically wired to store fat more efficiently due to evolutionary and hormonal differences. Hormonal fluctuations throughout the menstrual cycle, pregnancy, and menopause influence hunger and satiety signals, making it more challenging to maintain a caloric deficit consistently.</p>
       <p>Dr. Seojin explains, "Estrogen and progesterone can influence the production of ghrelin and leptin, the hormones responsible for hunger and satiety. During certain phases of the menstrual cycle, women are more likely to experience intense cravings and increased appetite."</p>
-      <p>Understanding these hormonal cycles can empower women to plan and adjust their nutritional habits, making weight loss efforts more aligned with their body’s natural rhythms.</p>
     </article>
 
-    <!-- Get Yours Now Button -->
-    <div class="button-container">
-      <a href="https://igniscent.shop/" target="_blank">Get Yours Now</a>
-    </div>
+    <!-- Call to Action Button -->
+    <a href="https://igniscent.shop/" class="cta-button" target="_blank">Get Yours Now</a>
   </main>
-
-  <section class="newsletter">
-    <h2>Want more updates like this?</h2>
-    <p>Join our newsletter for expert tips and breakthrough discoveries.</p>
-    <input type="email" placeholder="Enter your email" />
-    <button type="submit">Subscribe</button>
-  </section>
 
   <footer>
     <p>&copy; 2025 IgniScent Labs | All Rights Reserved</p>
   </footer>
 
-  <!-- Scroll-to-top Button -->
-  <button id="scrollToTopBtn">↑</button>
+  <button id="scrollToTopBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
 
   <script>
-    // Loader functionality
-    window.addEventListener("load", function() {
-      document.getElementById("loader").style.display = "none";
-    });
-
-    // Scroll to top button visibility
+    // Scroll to top button functionality
     const scrollToTopBtn = document.getElementById("scrollToTopBtn");
     window.onscroll = function() {
       if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -258,10 +194,7 @@
         scrollToTopBtn.style.display = "none";
       }
     };
-
-    scrollToTopBtn.addEventListener("click", function() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
   </script>
+
 </body>
 </html>
