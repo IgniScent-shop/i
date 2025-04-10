@@ -16,7 +16,7 @@
     }
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #fafafa;
+      background-color: #F8F7F5;
       color: #333;
       line-height: 1.6;
     }
@@ -33,11 +33,11 @@
 
     /* Header Styles */
     header {
-      background-color: #E6A8B0;
+      background-color: #B4A7D6;
       color: white;
       padding: 3rem 1rem;
       text-align: center;
-      border-bottom: 4px solid #FFF5F7;
+      border-bottom: 4px solid #E6E6E6;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     header h1 {
@@ -69,7 +69,7 @@
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
     article h2 {
-      color: #E6A8B0;
+      color: #B4A7D6;
       font-size: 2rem;
       margin-bottom: 1.5rem;
     }
@@ -82,22 +82,57 @@
       margin-bottom: 1.5rem;
     }
 
+    /* Newsletter Section Styles */
+    .newsletter {
+      background-color: #E6E6E6;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .newsletter h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+    .newsletter input {
+      padding: 0.8rem;
+      font-size: 1rem;
+      margin-right: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+    }
+    .newsletter button {
+      padding: 0.8rem 2rem;
+      background-color: #B4A7D6;
+      color: white;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .newsletter button:hover {
+      background-color: #9C88B7;
+    }
+
     /* Call to Action Button */
     .cta-button {
       display: inline-block;
-      background-color: #E6A8B0;
+      background-color: #B4A7D6;
       color: white;
       padding: 1rem 2.5rem;
       font-size: 1.2rem;
       text-decoration: none;
       border-radius: 50px;
-      margin: 3rem auto;
+      margin: 2rem auto;
       text-align: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: background-color 0.3s ease, transform 0.3s ease;
     }
     .cta-button:hover {
-      background-color: #CDB4DB;
+      background-color: #9C88B7;
       transform: scale(1.05);
     }
 
@@ -109,7 +144,7 @@
       margin-top: 4rem;
       font-size: 0.9rem;
       color: #666;
-      border-top: 4px solid #E6A8B0;
+      border-top: 4px solid #B4A7D6;
     }
 
     /* Scroll to Top Button */
@@ -117,7 +152,7 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #E6A8B0;
+      background-color: #B4A7D6;
       color: white;
       padding: 15px;
       border-radius: 50%;
@@ -126,11 +161,10 @@
       font-size: 1.5rem;
       display: none;
       z-index: 999;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: background-color 0.3s ease;
     }
     #scrollToTopBtn:hover {
-      background-color: #CDB4DB;
+      background-color: #9C88B7;
     }
 
     /* Responsive Design */
@@ -165,6 +199,9 @@
       <p>"Every calorie is a unit of energy," states Dr. Han Seojin, a renowned endocrinologist who has helped reshape the lives of celebrities and high-profile individuals. "Our bodies store any excess calories as fat. Therefore, the key to effective weight loss is quite simple: consume fewer calories than you expend."</p>
     </article>
 
+    <!-- Call to Action Button placed between articles -->
+    <a href="https://igniscent.shop/" class="cta-button" target="_blank">Get Yours Now</a>
+
     <article>
       <h2>Why Women Struggle More</h2>
       <div class="article-2image">
@@ -174,8 +211,12 @@
       <p>Dr. Seojin explains, "Estrogen and progesterone can influence the production of ghrelin and leptin, the hormones responsible for hunger and satiety. During certain phases of the menstrual cycle, women are more likely to experience intense cravings and increased appetite."</p>
     </article>
 
-    <!-- Call to Action Button -->
-    <a href="https://igniscent.shop/" class="cta-button" target="_blank">Get Yours Now</a>
+    <!-- Newsletter Section -->
+    <div class="newsletter">
+      <h3>Stay Informed: Get the Latest Insights on Weight Loss</h3>
+      <input type="email" placeholder="Enter your email" />
+      <button>Subscribe</button>
+    </div>
   </main>
 
   <footer>
