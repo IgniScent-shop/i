@@ -131,63 +131,6 @@
       transform: scale(1.03);
     }
 
-    /* Newsletter */
-    .newsletter {
-      text-align: center;
-      margin: -2rem auto 3rem;
-      padding: 2rem;
-      background: linear-gradient(135deg, #FADADD, #E5D4EF);
-      border-radius: 12px;
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-    }
-
-    .newsletter h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .newsletter p {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .newsletter input {
-      padding: 0.75rem;
-      font-size: 1rem;
-      border: 1px solid #E6A8B0;
-      border-radius: 6px;
-      width: 60%;
-      max-width: 300px;
-      font-family: Georgia, serif;
-      background-color: #fff5f7;
-      transition: box-shadow 0.3s;
-    }
-
-    .newsletter input:focus {
-      outline: none;
-      box-shadow: 0 0 8px rgba(94, 75, 86, 0.3);
-    }
-
-    .newsletter button {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      margin-left: 1rem;
-      background: linear-gradient(135deg, #E6A8B0, #CDB4DB);
-      border: none;
-      color: #fff;
-      border-radius: 6px;
-      cursor: pointer;
-      font-family: Georgia, serif;
-      transition: all 0.3s ease;
-      display: inline-block;
-    }
-
-    .newsletter button:hover {
-      transform: translateY(-2px);
-      background: linear-gradient(135deg, #CDB4DB, #E6A8B0);
-    }
-
     /* CTA Button */
     .button-container {
       text-align: center;
@@ -276,51 +219,49 @@
         <img src="What_Does_Your_First_Period_Look_Like.jpg" alt="Hormonal cycles and cravings" />
       </div>
       <p>Women’s bodies are biologically wired to store fat more efficiently due to evolutionary and hormonal differences. Hormonal fluctuations throughout the menstrual cycle, pregnancy, and menopause influence hunger and satiety signals, making it more challenging to maintain a caloric deficit consistently.</p>
-      <p>Dr. Seojin explains, "Estrogen and progesterone can influence the production of ghrelin and leptin, the hormones responsible for hunger and fullness signals." During certain phases of the menstrual cycle, women may experience an increase in appetite, making it more difficult to adhere to a weight loss plan.</p>
+      <p>Dr. Seojin explains, "Estrogen and progesterone can influence the production of ghrelin and leptin, the hormones responsible for hunger and satiety. During certain phases of the menstrual cycle, women are more likely to experience intense cravings and increased appetite."</p>
+      <p>Understanding these hormonal cycles can empower women to plan and adjust their nutritional habits, making weight loss efforts more aligned with their body’s natural rhythms.</p>
     </article>
 
+    <!-- Get Yours Now Button -->
     <div class="button-container">
-      <a href="#newsletter">Join Our Newsletter</a>
+      <a href="https://igniscent.shop/" target="_blank">Get Yours Now</a>
     </div>
   </main>
 
-  <section class="newsletter" id="newsletter">
-    <h2>Sign Up to Receive More Weight Loss Tips</h2>
-    <p>Get the latest science-backed tips straight to your inbox.</p>
+  <section class="newsletter">
+    <h2>Want more updates like this?</h2>
+    <p>Join our newsletter for expert tips and breakthrough discoveries.</p>
     <input type="email" placeholder="Enter your email" />
     <button type="submit">Subscribe</button>
   </section>
 
   <footer>
-    <p>&copy; 2025 IgniScent Labs. All rights reserved.</p>
+    <p>&copy; 2025 IgniScent Labs | All Rights Reserved</p>
   </footer>
 
-  <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+  <!-- Scroll-to-top Button -->
+  <button id="scrollToTopBtn">↑</button>
 
   <script>
-    // Loader Script
-    window.addEventListener('load', () => {
-      const loader = document.getElementById('loader');
-      setTimeout(() => {
-        loader.style.display = 'none';
-      }, 1500); // Hide loader after 1.5 seconds
+    // Loader functionality
+    window.addEventListener("load", function() {
+      document.getElementById("loader").style.display = "none";
     });
 
-    // Scroll-to-top Button
+    // Scroll to top button visibility
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
     window.onscroll = function() {
-      let scrollToTopBtn = document.getElementById('scrollToTopBtn');
       if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        scrollToTopBtn.style.display = 'block';
+        scrollToTopBtn.style.display = "block";
       } else {
-        scrollToTopBtn.style.display = 'none';
+        scrollToTopBtn.style.display = "none";
       }
     };
 
-    function scrollToTop() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
+    scrollToTopBtn.addEventListener("click", function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   </script>
-
 </body>
 </html>
