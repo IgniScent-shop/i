@@ -117,7 +117,7 @@
     .newsletter button:hover {
       background-color: #9C88B7;
     }
-      
+
     /* Call to Action Button */
     .cta-button {
       display: inline-block;
@@ -201,43 +201,65 @@
       <p>"Every calorie is a unit of energy," states Dr. Han Seojin, a renowned endocrinologist who has helped reshape the lives of celebrities and high-profile individuals. "Our bodies store any excess calories as fat. Therefore, the key to effective weight loss is quite simple: consume fewer calories than you expend."</p>
     </article>
 
+    <!-- Call to Action Button placed between articles -->
     <a href="https://igniscent.shop/" class="cta-button" target="_blank">Get Yours Now</a>
 
     <article>
       <h2>Why Women Struggle More</h2>
-      <div>
-        <img src="lady1.jpg" alt="Don't beat yourself up!" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
-      </div>
+        <div>
+    <img src="lady1.jpg" alt="Don't beat yourself up!" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
+        </div>
       <p>Women’s bodies are biologically wired to store fat more efficiently due to evolutionary and hormonal differences. Hormonal fluctuations throughout the menstrual cycle, pregnancy, and menopause influence hunger and satiety signals, making it more challenging to maintain a caloric deficit consistently.</p>
       <p>Dr. Seojin explains, "Estrogen and progesterone can influence the production of ghrelin and leptin, the hormones responsible for hunger and satiety. During certain phases of the menstrual cycle, women are more likely to experience intense cravings and increased appetite."</p>
     </article>
 
-    <section class="live-feedback">
-      <h2>Stories from Satisfied Women</h2>
-      <div class="testimonial">
-        <p><strong>I Struggled with Weight Loss Until I Discovered This Game-Changer</strong></p>
-        <p>For years, I struggled with managing my appetite and staying on track with my weight loss goals, despite my best efforts with dieting and exercise. I tried various products that promised results, but the cravings always seemed to get the best of me, leading to setbacks and frustration.</p>
-        <p>That all changed when I discovered IgniScent. This revolutionary nasal inhaler, with its natural appetite-curbing formula, helped me manage my hunger and cravings like never before. Finally, I could stay focused on my weight loss journey without the constant battle with hunger. IgniScent was the game-changer I had been searching for.</p>
+    <!-- Live Feedback Section -->
+<section class="live-feedback">
+  <h2>Stories from Satisfied Women</h2>
+  <div class="testimonial">
+    <p><strong>I Struggled with Weight Loss Until I Discovered This Game-Changer</strong></p>
+    <p>For years, I struggled with managing my appetite and staying on track with my weight loss goals, despite my best efforts with dieting and exercise. I tried various products that promised results, but the cravings always seemed to get the best of me, leading to setbacks and frustration.</p>
+    <p>That all changed when I discovered IgniScent. This revolutionary nasal inhaler, with its natural appetite-curbing formula, helped me manage my hunger and cravings like never before. Finally, I could stay focused on my weight loss journey without the constant battle with hunger. IgniScent was the game-changer I had been searching for.</p>
+    <p><strong>I Thought Exercise Was Enough — Until I Faced the Real Struggles</strong></p>
+    <p>I’ve always believed that with enough discipline, dieting and working out would be enough to reach my weight loss goals. And for a while, they were... but then came the cravings. Those uncontrollable moments when my body begged for just one more snack.</p>
+    <p>It was discouraging and emotionally taxing. That’s when I turned to IgniScent. With its calming scent and hunger-reducing effects, I finally found a way to break the cycle. The craving-free days have allowed me to focus on my workouts and healthy eating habits without distractions. I am so grateful!</p>
+  </div>
+</section>
 
-        <p><strong>I Thought Exercise Was Enough — Until I Faced the Real Struggles</strong></p>
-        <p>I’ve always believed that with enough discipline, dieting and working out would be enough to reach my weight loss goals. And for a while, they helped — I was eating clean, hitting the gym regularly, and staying consistent. But what I didn’t anticipate was just how intense the cravings would get, especially during stressful days or emotional moments.</p>
-        <p>No matter how hard I tried, hunger would creep in and throw me off track. I started realizing that willpower alone wasn’t enough. That’s when I found Igniscent, and honestly, it changed the game. The moment I started using it, I noticed a shift. My appetite felt manageable, my cravings weren’t controlling me, and I could finally stay focused without constantly thinking about food.</p>
-        <p>What I love most is that it feels like a natural support system. It didn’t replace my healthy habits — it enhanced them. Igniscent helped fill in the gap that diet and exercise alone couldn’t, especially when my metabolism slowed or my hormones felt out of balance.</p>
-        <p>If you're doing everything "right" but still feel like something’s missing, I highly recommend giving this a try. It’s been the missing piece in my weight loss puzzle.</p>
-      </div>
-    </section>
-
-    <div class="newsletter">
+    <!-- Newsletter Subscription -->
+    <div class="newsletter" id="newsletter-section">
       <h3>Stay Informed: Get the Latest Insights on Weight Loss</h3>
-      <input type="email" placeholder="Enter your email" />
-      <button>Subscribe</button>
+      <form id="newsletterForm">
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- Thank You Section -->
+    <div class="newsletter" id="thankYouSection" style="display: none;">
+      <h3>Thank You for Subscribing!</h3>
+      <p>You're now signed up to receive the latest science-backed tips and updates. Check your inbox!</p>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 IgniScent Labs | All Rights Reserved</p>
+    <p>© 2025 Igniscent Labs. All rights reserved.</p>
   </footer>
 
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</button>
+
+  <script>
+    // Handle Form Submission for Newsletter
+    const form = document.getElementById('newsletterForm');
+    const newsletterSection = document.getElementById('newsletter-section');
+    const thankYouSection = document.getElementById('thankYouSection');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // prevent page reload
+      newsletterSection.style.display = 'none';
+      thankYouSection.style.display = 'block';
+    });
+  </script>
 </body>
 </html>
-
