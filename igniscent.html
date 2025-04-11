@@ -253,6 +253,19 @@
       }
     };
   </script>
+  <script>
+  document.getElementById("subscribeBtn").addEventListener("click", function () {
+    const email = document.querySelector(".newsletter input").value;
+
+    if (email.trim() === "") {
+      alert("Please enter your email address.");
+    } else {
+      // Simulate saving the email or performing an action
+      // Then redirect
+      window.location.href = "thank-you.html"; // replace with your actual page
+    }
+  });
+</script>
 
 </body>
 </html>
