@@ -229,8 +229,10 @@
 <!-- Subscription Form -->
     <div class="newsletter">
       <h3>Join our community for weight loss tips and updates</h3>
-      <input type="email" placeholder="Enter your email" required />
-      <button type="submit">Subscribe</button>
+      <form action="https://example.com/submit-form" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
     </div>
   </main>
 
