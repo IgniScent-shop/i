@@ -245,15 +245,17 @@
   </button>
 
   <script>
-    // Scroll to top button functionality
-    window.onscroll = function() {
-      let scrollToTopBtn = document.getElementById("scrollToTopBtn");
-      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        scrollToTopBtn.style.display = "block";
-      } else {
-        scrollToTopBtn.style.display = "none";
-      }
-    };
-  </script>
+  // Scroll to top button functionality
+  const scrollBtn = document.getElementById('scrollToTopBtn');
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+</script>
+
 </body>
 </html>
