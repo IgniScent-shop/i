@@ -244,18 +244,28 @@
     ↑
   </button>
 
-  <script>
-  // Scroll to top button functionality
-  const scrollBtn = document.getElementById('scrollToTopBtn');
+   <script>
+    // Wait for the DOM to load
+    document.addEventListener("DOMContentLoaded", function () {
+      // Scroll effect placeholder (currently does nothing)
+      window.onscroll = function () {
+        // Add scroll logic here if needed
+      };
 
-  window.onscroll = function() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      scrollBtn.style.display = "block";
-    } else {
-      scrollBtn.style.display = "none";
-    }
-  };
-</script>
+      // Handle submit click
+      document.getElementById("sub").addEventListener("click", function () {
+        const emailInput = document.getElementById("email");
+        const email = emailInput.value.trim();
+
+        if (email === "") {
+          alert("Please enter an email.");
+        } else {
+          alert("Thanks for signing up! Tips coming soon to: " + email);
+          emailInput.value = ""; // Clear the input
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
